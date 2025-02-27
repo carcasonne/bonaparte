@@ -1,4 +1,5 @@
 using Bonaparte.Core.Identity;
+using Bonaparte.Core.JoinEntities;
 
 namespace Bonaparte.Core;
 
@@ -15,6 +16,9 @@ public class Playthrough
     public Game Game { get; set; }
     public string OwnerId { get; set; }
     public ApplicationUser Owner { get; set; }
+    public int RulesetId { get; set; }
+    public Ruleset Ruleset { get; set; }
     
-    public IEnumerable<ApplicationUser> Players { get; set; }
+    public ICollection<PlaythroughPlayer> Players { get; set; } = new List<PlaythroughPlayer>();
+    public ICollection<UserAchievement> CompletedAchievements { get; set; } = new List<UserAchievement>();
 }

@@ -6,4 +6,6 @@ public class Game
     
     public string Name {get; set;}
     public DateTime Created {get; set;}
+    
+    public ICollection<Playthrough> Playthroughs { get; set; } = new List<Playthrough>();
 }

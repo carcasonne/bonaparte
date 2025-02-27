@@ -5,6 +5,9 @@ using Bonaparte.Blazor.Components;
 using Bonaparte.Blazor.Components.Account;
 using Bonaparte.Core.EntityFramework;
 using Bonaparte.Core.Identity;
+using Bonaparte.Infrastructure;
+using Bonaparte.Infrastructure.Authorization;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,11 +34,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
+    .AddRoleStore<RoleStore<IdentityRole, ApplicationDbContext, string>>() 
+    .AddRoleManager<RoleManager<IdentityRole>>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
@@ -62,5 +70,7 @@ app.MapRazorComponents<App>()
 
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
+
+await app.Services.SeedRolesAsync();
 
 app.Run();

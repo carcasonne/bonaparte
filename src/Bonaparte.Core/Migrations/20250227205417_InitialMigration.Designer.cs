@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bonaparte.Core.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250227193016_InitialMigration")]
+    [Migration("20250227205417_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

@@ -1,0 +1,84 @@
+@page "/games"
+@using Bonaparte.Core
+@using Bonaparte.Core.Interfaces.Repository
+@using Bonaparte.Infrastructure.Authorization
+@using Microsoft.AspNetCore.Authorization
+@inject IGameRepository GameRepository
+
+@attribute [Authorize(Roles = AuthConstants.Roles.Admin)]
+
+<h1>Games</h1>
+
+@if (games == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var game in games)
+        {
+            <tr>
+                <td>@game.Id</td>
+                <td>@game.Name</td>
+                <td>@game.Created.ToShortDateString()</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" @onclick="() => DeleteGame(game.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Game>? games;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadGames();
+    }
+    
+    private async Task LoadGames()
+    {
+        try
+        {
+            games = await GameRepository.GetAllGamesAsync();
+            Console.WriteLine("You SHALL pass!");
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            // Handle authorization error
+            // Maybe show a notification or redirect
+            Console.WriteLine("You shall NOT pass!");
+        }
+        catch (Exception ex)
+        {
+            // Handle other errors
+        }
+    }
+    
+    private async Task DeleteGame(int id)
+    {
+        try
+        {
+            await GameRepository.DeleteGameAsync(id);
+            await LoadGames();
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            // Show unauthorized message
+        }
+    }
+    
+    // Implement other methods...
+}

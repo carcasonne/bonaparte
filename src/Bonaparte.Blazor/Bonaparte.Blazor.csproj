@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Bonaparte.Core\Bonaparte.Core.csproj" />
+      <ProjectReference Include="..\Bonaparte.Infrastructure\Bonaparte.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

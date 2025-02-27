@@ -1,8 +1,9 @@
 ﻿@page "/Account/Manage/TwoFactorAuthentication"
 
+@using Bonaparte.Core.Identity
 @using Microsoft.AspNetCore.Http.Features
 @using Microsoft.AspNetCore.Identity
-@using Bonaparte.Blazor.Data
+
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager

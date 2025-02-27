@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Bonaparte.Blazor.Components;
 using Bonaparte.Blazor.Components.Account;
-using Bonaparte.Blazor.Data;
+using Bonaparte.Core.EntityFramework;
+using Bonaparte.Core.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 

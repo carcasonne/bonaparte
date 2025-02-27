@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-using Bonaparte.Blazor.Data;
+using Bonaparte.Core.Identity;
 
 namespace Bonaparte.Blazor.Components.Account;
 

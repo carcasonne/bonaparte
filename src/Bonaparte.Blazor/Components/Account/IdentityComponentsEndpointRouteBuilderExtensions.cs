@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using Bonaparte.Blazor.Components.Account.Pages;
 using Bonaparte.Blazor.Components.Account.Pages.Manage;
-using Bonaparte.Blazor.Data;
+using Bonaparte.Core.Identity;
 
 namespace Microsoft.AspNetCore.Routing;
 

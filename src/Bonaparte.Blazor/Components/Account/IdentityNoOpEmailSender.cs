@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Bonaparte.Blazor.Data;
+using Bonaparte.Core.Identity;
 
 namespace Bonaparte.Blazor.Components.Account;
 

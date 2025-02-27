@@ -10,50 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a86f350-0f52-415c-86ea-232cd0a8e661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Core/Common/AuditableEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/AchievementEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/PlaythroughEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/RulesetEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Bonaparte.Blazor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Bonaparte.Blazor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityComponentsEndpointRouteBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityComponentsEndpointRouteBuilderExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityNoOpEmailSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityNoOpEmailSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityRevalidatingAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityRevalidatingAuthenticationStateProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityUserAccessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/IdentityUserAccessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ConfirmEmail.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ConfirmEmail.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ConfirmEmailChange.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ConfirmEmailChange.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ExternalLogin.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ExternalLogin.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ForgotPassword.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ForgotPassword.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Login.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Login.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/LoginWith2fa.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/LoginWith2fa.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/LoginWithRecoveryCode.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/LoginWithRecoveryCode.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ChangePassword.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ChangePassword.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/DeletePersonalData.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/DeletePersonalData.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Disable2fa.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Disable2fa.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Email.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Email.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/EnableAuthenticator.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/EnableAuthenticator.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ExternalLogins.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ExternalLogins.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/GenerateRecoveryCodes.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/GenerateRecoveryCodes.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ResetAuthenticator.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/ResetAuthenticator.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/SetPassword.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/SetPassword.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/TwoFactorAuthentication.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Manage/TwoFactorAuthentication.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/Register.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/RegisterConfirmation.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/RegisterConfirmation.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ResendEmailConfirmation.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ResendEmailConfirmation.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ResetPassword.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Pages/ResetPassword.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Shared/ExternalLoginPicker.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Shared/ExternalLoginPicker.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Shared/ManageNavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Account/Shared/ManageNavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/EntityFramework/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Identity/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/Migrations/00000000000000_CreateIdentitySchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Migrations/00000000000000_CreateIdentitySchema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte/Bonaparte.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bonaparte/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bonaparte/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data\app.db" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Data\app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/EntityFramework/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/EntityFramework/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Identity/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Identity/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/00000000000000_CreateIdentitySchema.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/00000000000000_CreateIdentitySchema.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +48,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sonne/Kode/Projekter/Bonaparte/src/Bonaparte.Core/Migrations&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -156,6 +120,9 @@
       <workItem from="1740671947410" duration="340000" />
       <workItem from="1740672293575" duration="549000" />
       <workItem from="1740672853127" duration="3097000" />
+      <workItem from="1740675983995" duration="2610000" />
+      <workItem from="1740678605062" duration="90000" />
+      <workItem from="1740678705403" duration="3987000" />
     </task>
     <servers />
   </component>

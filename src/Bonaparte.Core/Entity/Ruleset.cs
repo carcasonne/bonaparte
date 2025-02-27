@@ -16,7 +16,7 @@ public class Ruleset : AuditableEntity
     public string OwnerId { get; set; }
     public ApplicationUser Owner { get; set; }
     
-    public IEnumerable<ApplicationUser> CoOwners { get; set; }
+    public ICollection<RulesetCoOwner> CoOwners { get; set; } = new List<RulesetCoOwner>();
     public ICollection<RulesetAchievement> Achievements { get; set; } = new List<RulesetAchievement>();
     public ICollection<Playthrough> Playthroughs { get; set; } = new List<Playthrough>();
 }

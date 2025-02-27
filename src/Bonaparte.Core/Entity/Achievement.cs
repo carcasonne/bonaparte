@@ -1,3 +1,4 @@
+using Bonaparte.Core.Identity;
 using Bonaparte.Core.JoinEntities;
 using Microsoft.AspNetCore.Identity;
 
@@ -11,7 +12,7 @@ public class Achievement
     public int Points { get; set; } 
     
     public string OwnerId { get; set; }
-    public IdentityUser Owner { get; set; }
+    public ApplicationUser Owner { get; set; }
     
     public ICollection<RulesetAchievement> Rulesets { get; set; } = new List<RulesetAchievement>();
     public ICollection<UserAchievement> CompletedBy { get; set; } = new List<UserAchievement>();

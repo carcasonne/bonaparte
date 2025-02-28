@@ -1,10 +1,10 @@
+using Bonaparte.Core.Common;
 using Bonaparte.Core.Identity;
 using Bonaparte.Core.JoinEntities;
-using Microsoft.AspNetCore.Identity;
 
 namespace Bonaparte.Core;
 
-public class Achievement
+public class Achievement : AuditableEntity
 {
     public int Id { get; set; }
     

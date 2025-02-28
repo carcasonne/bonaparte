@@ -10,24 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a86f350-0f52-415c-86ea-232cd0a8e661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Pages/Games.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/Authorization/AuthConstants.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/Authorization/AuthorizationExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/Authorization/RoleSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/Authorization/RoleSeederExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bonaparte.Infrastructure/Repository/GameRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bonaparte/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bonaparte/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Bonaparte.Blazor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Bonaparte.Blazor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Pages/Auth.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Pages/Auth.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data\app.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Identity/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Identity/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Interfaces/Repository/IGameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Interfaces/Repository/IGameRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/20250227193016_InitialMigration.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/20250227193016_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Layout/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Layout/NavMenu.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Components/Layout/NavMenu.razor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Blazor/Data\app.db" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Blazor/Data\app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Common/AuditableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Common/AuditableEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Entity/Achievement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/Achievement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Entity/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Entity/Playthrough.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.Core/Entity/Playthrough.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/20250227205417_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/20250227205417_InitialMigration.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Bonaparte.Core/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bonaparte.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Bonaparte.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Bonaparte.Blazor: http.executor": "Run",
-    ".NET Project.Bonaparte.executor": "Run",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/sonne/Kode/Projekter/Bonaparte/src/Bonaparte.Core/Migrations",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Bonaparte.Blazor: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Bonaparte.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sonne/Kode/Projekter/Bonaparte/src/Bonaparte.Core/Migrations&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Bonaparte.Blazor: http">
     <configuration name="Bonaparte" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Bonaparte.Blazor/bin/Debug/net9.0/Bonaparte.Blazor" />
@@ -137,6 +130,7 @@
       <workItem from="1740675983995" duration="2610000" />
       <workItem from="1740678605062" duration="90000" />
       <workItem from="1740678705403" duration="9468000" />
+      <workItem from="1740737165930" duration="2197000" />
     </task>
     <servers />
   </component>

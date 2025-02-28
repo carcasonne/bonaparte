@@ -1,10 +1,11 @@
+using Bonaparte.Core.Common;
 using Bonaparte.Core.Identity;
 using Bonaparte.Core.JoinEntities;
 
 namespace Bonaparte.Core;
 
 // A playthrough is a session of playing some game with some ruleset 
-public class Playthrough
+public class Playthrough : AuditableEntity
 {
     public int Id { get; set; }
     

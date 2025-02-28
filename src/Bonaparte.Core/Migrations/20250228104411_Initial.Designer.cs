@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bonaparte.Core.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250227205417_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250228104411_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,13 @@ namespace Bonaparte.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -36,9 +43,17 @@ namespace Bonaparte.Core.Migrations
                     b.Property<int>("Points")
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedById1")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OwnerId");
+
+                    b.HasIndex("UpdatedById1");
 
                     b.ToTable("Achievements");
                 });
@@ -52,11 +67,26 @@ namespace Bonaparte.Core.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedById1")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UpdatedById1");
 
                     b.ToTable("Games");
                 });
@@ -210,6 +240,13 @@ namespace Bonaparte.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime?>("EndTime")
                         .HasColumnType("TEXT");
 
@@ -229,6 +266,12 @@ namespace Bonaparte.Core.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UpdatedById1")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("GameId");
@@ -236,6 +279,8 @@ namespace Bonaparte.Core.Migrations
                     b.HasIndex("OwnerId");
 
                     b.HasIndex("RulesetId");
+
+                    b.HasIndex("UpdatedById1");
 
                     b.ToTable("Playthroughs");
                 });
@@ -245,6 +290,13 @@ namespace Bonaparte.Core.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("GameId")
                         .HasColumnType("INTEGER");
@@ -259,8 +311,7 @@ namespace Bonaparte.Core.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UpdatedBy")
-                        .IsRequired()
+                    b.Property<string>("UpdatedById1")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -268,6 +319,8 @@ namespace Bonaparte.Core.Migrations
                     b.HasIndex("GameId");
 
                     b.HasIndex("OwnerId");
+
+                    b.HasIndex("UpdatedById1");
 
                     b.ToTable("RuleSets");
                 });
@@ -407,7 +460,22 @@ namespace Bonaparte.Core.Migrations
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("Bonaparte.Core.Identity.ApplicationUser", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById1");
+
                     b.Navigation("Owner");
+
+                    b.Navigation("UpdatedBy");
+                });
+
+            modelBuilder.Entity("Bonaparte.Core.Game", b =>
+                {
+                    b.HasOne("Bonaparte.Core.Identity.ApplicationUser", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById1");
+
+                    b.Navigation("UpdatedBy");
                 });
 
             modelBuilder.Entity("Bonaparte.Core.JoinEntities.PlaythroughPlayer", b =>
@@ -513,11 +581,17 @@ namespace Bonaparte.Core.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("Bonaparte.Core.Identity.ApplicationUser", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById1");
+
                     b.Navigation("Game");
 
                     b.Navigation("Owner");
 
                     b.Navigation("Ruleset");
+
+                    b.Navigation("UpdatedBy");
                 });
 
             modelBuilder.Entity("Bonaparte.Core.Ruleset", b =>
@@ -533,9 +607,15 @@ namespace Bonaparte.Core.Migrations
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("Bonaparte.Core.Identity.ApplicationUser", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById1");
+
                     b.Navigation("Game");
 
                     b.Navigation("Owner");
+
+                    b.Navigation("UpdatedBy");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

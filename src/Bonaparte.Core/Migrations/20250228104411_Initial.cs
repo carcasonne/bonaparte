@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Bonaparte.Core.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,20 +51,6 @@ namespace Bonaparte.Core.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Games",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Created = table.Column<DateTime>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Games", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -93,7 +79,11 @@ namespace Bonaparte.Core.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Points = table.Column<int>(type: "INTEGER", nullable: false),
-                    OwnerId = table.Column<string>(type: "TEXT", nullable: true)
+                    OwnerId = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedById = table.Column<string>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedById1 = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -104,6 +94,11 @@ namespace Bonaparte.Core.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_Achievements_AspNetUsers_UpdatedById1",
+                        column: x => x.UpdatedById1,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -192,6 +187,29 @@ namespace Bonaparte.Core.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Games",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Created = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedById = table.Column<string>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedById1 = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Games", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Games_AspNetUsers_UpdatedById1",
+                        column: x => x.UpdatedById1,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "RuleSets",
                 columns: table => new
                 {
@@ -200,8 +218,10 @@ namespace Bonaparte.Core.Migrations
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     GameId = table.Column<int>(type: "INTEGER", nullable: false),
                     OwnerId = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedById = table.Column<string>(type: "TEXT", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: false)
+                    UpdatedById1 = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -212,6 +232,11 @@ namespace Bonaparte.Core.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_RuleSets_AspNetUsers_UpdatedById1",
+                        column: x => x.UpdatedById1,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_RuleSets_Games_GameId",
                         column: x => x.GameId,
@@ -231,7 +256,11 @@ namespace Bonaparte.Core.Migrations
                     EndTime = table.Column<DateTime>(type: "TEXT", nullable: true),
                     GameId = table.Column<int>(type: "INTEGER", nullable: false),
                     OwnerId = table.Column<string>(type: "TEXT", nullable: true),
-                    RulesetId = table.Column<int>(type: "INTEGER", nullable: false)
+                    RulesetId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedById = table.Column<string>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedById1 = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -242,6 +271,11 @@ namespace Bonaparte.Core.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_Playthroughs_AspNetUsers_UpdatedById1",
+                        column: x => x.UpdatedById1,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Playthroughs_Games_GameId",
                         column: x => x.GameId,
@@ -369,6 +403,11 @@ namespace Bonaparte.Core.Migrations
                 column: "OwnerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Achievements_UpdatedById1",
+                table: "Achievements",
+                column: "UpdatedById1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -406,6 +445,11 @@ namespace Bonaparte.Core.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Games_UpdatedById1",
+                table: "Games",
+                column: "UpdatedById1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PlaythroughPlayer_UserId",
                 table: "PlaythroughPlayer",
                 column: "UserId");
@@ -426,6 +470,11 @@ namespace Bonaparte.Core.Migrations
                 column: "RulesetId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Playthroughs_UpdatedById1",
+                table: "Playthroughs",
+                column: "UpdatedById1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RulesetAchievement_AchievementId",
                 table: "RulesetAchievement",
                 column: "AchievementId");
@@ -444,6 +493,11 @@ namespace Bonaparte.Core.Migrations
                 name: "IX_RuleSets_OwnerId",
                 table: "RuleSets",
                 column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RuleSets_UpdatedById1",
+                table: "RuleSets",
+                column: "UpdatedById1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserAchievement_AchievementId",
@@ -504,10 +558,10 @@ namespace Bonaparte.Core.Migrations
                 name: "RuleSets");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Games");
 
             migrationBuilder.DropTable(
-                name: "Games");
+                name: "AspNetUsers");
         }
     }
 }

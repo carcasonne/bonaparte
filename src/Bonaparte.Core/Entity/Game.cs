@@ -1,6 +1,8 @@
-﻿namespace Bonaparte.Core;
+﻿using Bonaparte.Core.Common;
 
-public class Game
+namespace Bonaparte.Core;
+
+public class Game : AuditableEntity
 {
     public int Id { get; set; }
     
